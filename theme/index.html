@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>TaskGlide</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="">
+  <meta name="author" content="TaskGlide">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font CSS (Via CDN) -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/magnific/magnific-popup.css">
+
+
+  <!-- Dropzone CSS -->
+  <link rel="stylesheet" href="vendor/plugins/dropzone/css/dropzone.css">
+
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme2.css">
+  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme3.css">
+
+  <!-- Admin Forms CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.css">
+
+  <!-- Favicon -->
+  <!-- <link rel="shortcut icon" href="assets/img/favicon.ico"> -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="assets/icons/manifest.json">
+  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="TaskGlide">
+  <meta name="application-name" content="TaskGlide">
+  <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="gallery-page">
+
+
+
+  <!-- Start: Main -->
+  <div id="main">
+
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="dashboard.html">
+          <img src="assets/img/logos/logo38.svg" height="38">
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+
+        <li>
+          <a class="topbar-menu-toggle" href="index.html#">
+            <span class="ad ad-wand fs16"></span>
+          </a>
+        </li>
+        <li class="hidden-xs">
+          <a class="request-fullscreen toggle-active" href="index.html#">
+            <span class="ad ad-screen-full fs18"></span>
+          </a>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left navbar-search" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search..." value="Search...">
+        </div>
+      </form>
+
+      <ul class="nav navbar-nav navbar-right">
+
+
+
+
+        <li class="menu-divider hidden-xs">
+          <i class="fa fa-circle"></i>
+        </li>
+        <li class="dropdown">
+          <a href="index.html#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> John.Smith
+            <span class="caret caret-tp hidden-xs"></span>
+          </a>
+          <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
+            <li class="dropdown-header clearfix">
+              <div class="pull-left ml10">
+                <select id="user-status">
+                  <optgroup label="Current Status:">
+                    <option value="1-1">Away</option>
+                    <option value="1-2">Offline</option>
+                    <option value="1-3" selected="selected">Online</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="pull-right mr10">
+                <select id="user-role">
+                  <optgroup label="Logged in As:">
+                    <option value="1-1">Client</option>
+                    <option value="1-2">Editor</option>
+                    <option value="1-3" selected="selected">Admin</option>
+                  </optgroup>
+                </select>
+              </div>
+
+            </li>
+            <li class="list-group-item">
+              <a href="index.html#" class="animated animated-short fadeInUp">
+                <span class="fa fa-envelope"></span> Messages
+                <span class="label label-warning">2</span>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="index.html#" class="animated animated-short fadeInUp">
+                <span class="fa fa-user"></span> Friends
+                <span class="label label-warning">6</span>
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href="index.html#" class="animated animated-short fadeInUp">
+                <span class="fa fa-gear"></span> Account Settings </a>
+            </li>
+            <li class="list-group-item">
+              <a href="index.html#" class="animated animated-short fadeInUp">
+                <span class="fa fa-power-off"></span> Logout </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Sidebar -->
+    <aside id="sidebar_left" class="nano nano-primary affix">
+
+      <!-- Start: Sidebar Left Content -->
+      <div class="sidebar-left-content nano-content">
+
+        <!-- Start: Sidebar Header -->
+        <header class="sidebar-header">
+
+          <!-- Sidebar Widget - Menu (Slidedown) -->
+          <div class="sidebar-widget menu-widget">
+            <div class="row text-center mbn">
+              <div class="col-xs-4">
+                <a href="dashboard.html" class="text-primary" data-toggle="tooltip" data-placement="top" title="Dashboard">
+                  <span class="glyphicon glyphicon-home"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_messages.html" class="text-info" data-toggle="tooltip" data-placement="top" title="Messages">
+                  <span class="glyphicon glyphicon-inbox"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_profile.html" class="text-alert" data-toggle="tooltip" data-placement="top" title="Tasks">
+                  <span class="glyphicon glyphicon-bell"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_timeline.html" class="text-system" data-toggle="tooltip" data-placement="top" title="Activity">
+                  <span class="fa fa-desktop"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="pages_profile.html" class="text-danger" data-toggle="tooltip" data-placement="top" title="Settings">
+                  <span class="fa fa-gears"></span>
+                </a>
+              </div>
+              <div class="col-xs-4">
+                <a href="index.html" class="text-warning" data-toggle="tooltip" data-placement="top" title="Cron Jobs">
+                  <span class="fa fa-flask"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar Widget - Author (hidden)  -->
+          <div class="sidebar-widget author-widget hidden">
+            <div class="media">
+              <a class="media-left" href="index.html#">
+                <img src="assets/img/avatars/3.jpg" class="img-responsive">
+              </a>
+              <div class="media-body">
+                <div class="media-links">
+                   <a href="index.html#" class="sidebar-menu-toggle">User Menu -</a> <a href="pages_login(alt).html">Logout</a>
+                </div>
+                <div class="media-author">Michael Richards</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar Widget - Search (hidden) -->
+          <div class="sidebar-widget search-widget hidden">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="fa fa-search"></i>
+              </span>
+              <input type="text" id="sidebar-search" class="form-control" placeholder="Search...">
+            </div>
+          </div>
+
+        </header>
+        <!-- End: Sidebar Header -->
+
+        <!-- Start: Sidebar Menu -->
+        <ul class="nav sidebar-menu">
+          <li class="sidebar-label pt20">Menu</li>
+          <li class="active">
+            <a href="index.html">
+              <span class="glyphicon glyphicon-home"></span>
+              <span class="sidebar-title">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="../README/index.html">
+              <span class="glyphicon glyphicon-book"></span>
+              <span class="sidebar-title">Documentation</span>
+            </a>
+          </li>
+
+
+
+          <!-- sidebar bullets -->
+          <li class="sidebar-label pt20">TASKS</li>
+          <li class="sidebar-proj">
+            <a href="pages_confirmation.html">
+              <span class="fa fa-dot-circle-o text-primary"></span>
+              <span class="sidebar-title">Task 1</span>
+              <span class="sidebar-title-tray">
+                <span class="label label-xs bg-primary">Sign here</span>
+              </span>
+            </a>
+          </li>
+          <li class="sidebar-proj">
+            <a href="index.html#projectTwo">
+              <span class="fa fa-dot-circle-o text-info"></span>
+              <span class="sidebar-title">Task 2</span>
+            </a>
+          </li>
+          <li class="sidebar-proj">
+            <a href="index.html#projectTwo">
+              <span class="fa fa-dot-circle-o text-danger"></span>
+              <span class="sidebar-title">Task 3</span>
+            </a>
+          </li>
+          <li class="sidebar-proj">
+            <a href="index.html#projectThree">
+              <span class="fa fa-dot-circle-o text-warning"></span>
+              <span class="sidebar-title">Task 4</span>
+            </a>
+          </li>
+
+          <!-- sidebar progress bars -->
+          <li class="sidebar-label pt25 pb10">Task Glide Space</li>
+          <li class="sidebar-stat">
+            <a href="index.html#projectOne" class="fs11">
+              <span class="fa fa-inbox text-info"></span>
+              <span class="sidebar-title text-muted">Messages Storage</span>
+              <span class="pull-right mr20 text-muted">35%</span>
+              <div class="progress progress-bar-xs mh20 mb10">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                  <span class="sr-only">35% Complete</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="sidebar-stat">
+            <a href="index.html#projectOne" class="fs11">
+              <span class="fa fa-dropbox text-warning"></span>
+              <span class="sidebar-title text-muted">Disk Space</span>
+              <span class="pull-right mr20 text-muted">58%</span>
+              <div class="progress progress-bar-xs mh20">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 58%">
+                  <span class="sr-only">58% Complete</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- End: Sidebar Menu -->
+
+
+
+      </div>
+      <!-- End: Sidebar Left Content -->
+
+    </aside>
+
+    <!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+
+
+
+      <!-- Start: Topbar -->
+<!--       <header id="topbar">
+        <div class="topbar-left">
+          <ol class="breadcrumb">
+            <li class="crumb-active">
+              <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="crumb-icon">
+              <a href="dashboard.html">
+                <span class="glyphicon glyphicon-home"></span>
+              </a>
+            </li>
+            <li class="crumb-link">
+              <a href="dashboard.html">Home</a>
+            </li>
+            <li class="crumb-trail">Dashboard</li>
+          </ol>
+        </div>
+        <div class="topbar-right">
+          <div class="ib topbar-dropdown">
+            <label for="topbar-multiple" class="control-label pr10 fs11 text-muted">Reporting Period</label>
+            <select id="topbar-multiple" class="hidden">
+              <optgroup label="Filter By:">
+                <option value="1-1">Last 30 Days</option>
+                <option value="1-2" selected="selected">Last 60 Days</option>
+                <option value="1-3">Last Year</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="ml15 ib va-m" id="toggle_sidemenu_r">
+            <a href="index.html#" class="pl5">
+              <i class="fa fa-sign-in fs22 text-primary"></i>
+              <span class="badge badge-hero badge-danger">3</span>
+            </a>
+          </div>
+        </div>
+      </header> -->
+      <!-- End: Topbar -->
+
+      <section id="content" class="table-layout animated fadeIn">
+
+        <div class="tray tray-center">
+
+          <div class="mh15 pv15 br-b br-light">
+            <div class="row">
+
+
+
+
+<div class="row">
+
+            <div class="col-sm-4 hidden-xs pr20">
+
+              <h4> Dropzone.JS - <small>"The last Slider You Will Ever Need."</small></h4>
+              <ul class="icon-list">
+                  <li>
+                    <i class="fa fa-exclamation-circle text-warning fa-lg pr10"></i>
+                    <b>Author:</b> Matias Meno.
+                  </li>
+                  <li>
+                    <i class="fa fa-exclamation-circle text-warning fa-lg pr10"></i>
+                    <b>License:</b> The MIT License (MIT).
+                  </li>
+                  <li>
+                    <i class="fa fa-exclamation-circle text-warning fa-lg pr10"></i>
+                    <b>Website:</b>
+                    <a href="https://github.com/enyo/dropzone">https://github.com/dropzone </a>
+                  </li>
+                </ul>
+
+              <hr class="alt mt25 mb15">
+
+
+
+            </div>
+
+            <div class="col-xs-12 col-sm-8 pl30">
+              <div class="tray-bin pl10 mb10" style="min-height: 250px;">
+                <h5 class="text-muted mt10 fw600 pl10">
+                  <i class="fa fa-exclamation-circle text-info fa-lg pr10"></i> Portlet Drag and Drop Uploader </h5>
+                <form action="../../../file-upload.html" class="dropzone dropzone-sm" id="dropZone">
+                  <div class="fallback">
+                    <input name="file" type="file" multiple />
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+              <div class="col-xs-7">
+                <div class="mix-controls ib">
+                  <form class="controls" id="select-filters">
+                    <!-- We can add an unlimited number of "filter groups" using the following format: -->
+                    <div class="btn-group ib mr10">
+                      <button type="button" class="btn btn-default hidden-xs">
+                        <span class="fa fa-folder"></span>
+                      </button>
+                      <div class="btn-group">
+                        <fieldset>
+                          <select id="filter1">
+                            <option value="">All Folders</option>
+                            <option value=".folder1">Publicity</option>
+                            <option value=".folder2">Spain Vacation</option>
+                            <option value=".folder3">Sony Demo</option>
+                          </select>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="btn-group ib mr10">
+                      <button type="button" class="btn btn-default hidden-xs">
+                        <span class="fa fa-tag"></span>
+                      </button>
+                      <div class="btn-group">
+                        <fieldset>
+                          <select id="filter2">
+                            <option value="">All Labels</option>
+                            <option value=".label1">Work</option>
+                            <option value=".label3">Clients</option>
+                            <option value=".label2">Family</option>
+                          </select>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+              <div class="col-xs-5 text-right">
+                <button type="button" id="mix-reset" class="btn btn-default mr5">Clear Filters</button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default to-grid">
+                    <span class="fa fa-th"></span>
+                  </button>
+                  <button type="button" class="btn btn-default to-list">
+                    <span class="fa fa-navicon"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="mix-controls hidden">
+              <form class="controls admin-form" id="checkbox-filters">
+                <!-- We can add an unlimited number of "filter groups" using the following format: -->
+
+                <fieldset class="">
+                  <h4>Cars</h4>
+
+                  <label class="option block mt10">
+                    <input type="checkbox" value=".circle">
+                    <span class="checkbox"></span>Circle
+                  </label>
+
+                </fieldset>
+
+                <button id="mix-reset2">Clear All</button>
+              </form>
+
+            </div>
+          </div>
+
+          <div id="mix-container">
+
+            <div class="fail-message">
+              <span>No items were found matching the selected filters</span>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/1.jpg" class="img-responsive" title="lost_typewritter.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>lost_typewritter.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-info ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label2 folder2">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/2.jpg" class="img-responsive" title="stairs-to_soul.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>stairs-to_soul.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-alert ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label3 folder3">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/3.jpg" class="img-responsive" title="why_are_locks.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>why_are_locks.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-danger ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/4.jpg" class="img-responsive" title="cool_cup.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>cool_cup.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-primary ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label2 folder2">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/5.jpg" class="img-responsive" title="the-beach.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>the-beach.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-system ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label3 folder3">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/1.jpg" class="img-responsive" title="windy_dirtroad.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>windy_dirtroad.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-primary ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/2.jpg" class="img-responsive" title="yosemite_sun.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>yosemite_sun.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-alert ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label2 folder2">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/3.jpg" class="img-responsive" title="stairs-not.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>stairs-not.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-info ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/1.jpg" class="img-responsive" title="lost_typewritter.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>lost_typewritter.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-info ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label2 folder2">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/2.jpg" class="img-responsive" title="stairs-to_soul.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>stairs-to_soul.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-alert ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label3 folder3">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/3.jpg" class="img-responsive" title="why_are_locks.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>why_are_locks.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-danger ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="assets/img/stock/4.jpg" class="img-responsive" title="cool_cup.jpg">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>cool_cup.jpg</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-primary ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+
+          </div>
+
+        </div>
+
+        <aside class="tray tray-right tray320">
+
+          <h4 class="tray-title"> Chat </h4>
+
+          <div id=box style="width:100%;height:60%;background:#ffeffe;border:1px dotted black;text-align:left;padding: 5px;margin-right: 5px;margin-bottom: 10px;word-break:break-all"></div>
+
+          <div class="form-group"><input type="text" id="input" class="form-control" placeholder="Chat here"/>
+            <!--<input id=input style="width:100%" placeholder=chatbox />-->
+          </div>
+
+
+
+
+
+        </aside>
+
+
+      </section>
+
+    </section>
+
+
+
+  </div>
+  <!-- End: Main -->
+
+  <!-- BEGIN: PAGE SCRIPTS -->
+  <!-- Dropzone JS -->
+  <script src="vendor/plugins/dropzone/dropzone.min.js"></script>
+
+
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+  <script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+
+  <!-- Mixitup Plugin -->
+  <script src="vendor/plugins/mixitup/jquery.mixitup.min.js"></script>
+
+  <!-- Page Plugins -->
+  <script src="vendor/plugins/magnific/jquery.magnific-popup.js"></script>
+  <script src="vendor/plugins/fileupload/fileupload.js"></script>
+  <script src="vendor/plugins/holder/holder.min.js"></script>
+
+  <!-- Theme Javascript -->
+  <script src="assets/js/utility/utility.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core
+    Core.init();
+
+    // Init Demo JS
+    Demo.init();
+
+    // To keep our code clean and modular, all custom functionality will be
+    // contained inside a single object literal called "dropdownFilter".
+    var dropdownFilter = {
+
+      // Declare any variables we will need as properties of the object
+      $filters: null,
+      $reset: null,
+      groups: [],
+      outputArray: [],
+      outputString: '',
+
+      // The "init" method will run on document ready and cache any jQuery objects we will need.
+      init: function() {
+        var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "dropdownFilter" object so that we can share methods and properties between all parts of the object.
+
+        self.$filters = $('#select-filters');
+        self.$reset = $('#mix-reset');
+        self.$container = $('#mix-container');
+
+        self.$filters.find('fieldset').each(function() {
+          self.groups.push({
+            $dropdown: $(this).find('select'),
+            active: ''
+          });
+        });
+
+        self.bindHandlers();
+      },
+
+      // The "bindHandlers" method will listen for whenever a select is changed.
+      bindHandlers: function() {
+        var self = this;
+
+        // Handle select change
+        self.$filters.on('change', 'select', function(e) {
+          e.preventDefault();
+
+          self.parseFilters();
+        });
+
+        // Handle reset click
+        self.$reset.on('click', function(e) {
+          e.preventDefault();
+
+          self.$filters.find('select').val('');
+
+          self.parseFilters();
+        });
+      },
+
+      // The parseFilters method pulls the value of each active select option
+      parseFilters: function() {
+        var self = this;
+
+        // loop through each filter group and grap the value from each one.
+        for (var i = 0, group; group = self.groups[i]; i++) {
+          group.active = group.$dropdown.val();
+        }
+
+        self.concatenate();
+      },
+
+      // The "concatenate" method will crawl through each group, concatenating filters as desired:
+      concatenate: function() {
+        var self = this;
+
+        self.outputString = ''; // Reset output string
+
+        for (var i = 0, group; group = self.groups[i]; i++) {
+          self.outputString += group.active;
+        }
+
+        // If the output string is empty, show all rather than none:
+        !self.outputString.length && (self.outputString = 'all');
+
+        //console.log(self.outputString);
+        // ^ we can check the console here to take a look at the filter string that is produced
+
+        // Send the output string to MixItUp via the 'filter' method:
+        if (self.$container.mixItUp('isLoaded')) {
+          self.$container.mixItUp('filter', self.outputString);
+        }
+      }
+    };
+
+    // To keep our code clean and modular, all custom functionality will be contained inside a single object literal called "checkboxFilter".
+    var checkboxFilter = {
+
+      // Declare any variables we will need as properties of the object
+      $filters: null,
+      $reset: null,
+      groups: [],
+      outputArray: [],
+      outputString: '',
+
+      // The "init" method will run on document ready and cache any jQuery objects we will need.
+      init: function() {
+        var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "checkboxFilter" object so that we can share methods and properties between all parts of the object.
+
+        self.$filters = $('#checkbox-filters');
+        self.$reset = $('#mix-reset2');
+        self.$container = $('#mix-container');
+
+        self.$filters.find('fieldset').each(function() {
+          self.groups.push({
+            $inputs: $(this).find('input'),
+            active: [],
+            tracker: false
+          });
+        });
+
+        self.bindHandlers();
+      },
+
+      // The "bindHandlers" method will listen for whenever a form value changes.
+      bindHandlers: function() {
+        var self = this;
+
+        self.$filters.on('change', function() {
+          self.parseFilters();
+        });
+
+        self.$reset.on('click', function(e) {
+          e.preventDefault();
+          self.$filters[0].reset();
+          self.parseFilters();
+        });
+      },
+
+      // The parseFilters method checks which filters are active in each group:
+      parseFilters: function() {
+        var self = this;
+
+        // loop through each filter group and add active filters to arrays
+        for (var i = 0, group; group = self.groups[i]; i++) {
+          group.active = []; // reset arrays
+          group.$inputs.each(function() {
+            $(this).is(':checked') && group.active.push(this.value);
+          });
+          group.active.length && (group.tracker = 0);
+        }
+
+        self.concatenate();
+      },
+
+      // The "concatenate" method will crawl through each group, concatenating filters as desired:
+      concatenate: function() {
+        var self = this,
+          cache = '',
+          crawled = false,
+          checkTrackers = function() {
+            var done = 0;
+
+            for (var i = 0, group; group = self.groups[i]; i++) {
+              (group.tracker === false) && done++;
+            }
+
+            return (done < self.groups.length);
+          },
+          crawl = function() {
+            for (var i = 0, group; group = self.groups[i]; i++) {
+              group.active[group.tracker] && (cache += group.active[group.tracker]);
+
+              if (i === self.groups.length - 1) {
+                self.outputArray.push(cache);
+                cache = '';
+                updateTrackers();
+              }
+            }
+          },
+          updateTrackers = function() {
+            for (var i = self.groups.length - 1; i > -1; i--) {
+              var group = self.groups[i];
+
+              if (group.active[group.tracker + 1]) {
+                group.tracker++;
+                break;
+              } else if (i > 0) {
+                group.tracker && (group.tracker = 0);
+              } else {
+                crawled = true;
+              }
+            }
+          };
+
+        self.outputArray = []; // reset output array
+
+        do {
+          crawl();
+        }
+        while (!crawled && checkTrackers());
+
+        self.outputString = self.outputArray.join();
+
+        // If the output string is empty, show all rather than none:
+        !self.outputString.length && (self.outputString = 'all');
+
+        //console.log(self.outputString);
+        // ^ we can check the console here to take a look at the filter string that is produced
+
+        // Send the output string to MixItUp via the 'filter' method:
+        if (self.$container.mixItUp('isLoaded')) {
+          self.$container.mixItUp('filter', self.outputString);
+        }
+      }
+    };
+
+    // Init multiselect plugin on filter dropdowns
+    $('#filter1').multiselect({
+      buttonClass: 'btn btn-default',
+    });
+    $('#filter2').multiselect({
+      buttonClass: 'btn btn-default',
+    });
+
+    // Init checkboxFilter code
+    checkboxFilter.init();
+
+    // Init dropdownFilter code
+    dropdownFilter.init();
+
+    var $container = $('#mix-container'), // mixitup container
+      $toList = $('.to-list'), // list view button
+      $toGrid = $('.to-grid'); // list view button
+
+    // Instantiate MixItUp
+    $container.mixItUp({
+      controls: {
+        enable: false // we won't be needing these
+      },
+      animation: {
+        duration: 400,
+        effects: 'fade translateZ(-360px) stagger(45ms)',
+        easing: 'ease'
+      },
+      callbacks: {
+        onMixFail: function() {}
+      }
+    });
+
+    $toList.on('click', function() {
+      if ($container.hasClass('list')) {
+        return
+      }
+      $container.mixItUp('changeLayout', {
+        display: 'block',
+        containerClass: 'list'
+      }, function(state) {
+        // callback function
+      });
+    });
+    $toGrid.on('click', function() {
+      if ($container.hasClass('grid')) {
+        return
+      }
+      $container.mixItUp('changeLayout', {
+        display: 'inline-block',
+        containerClass: 'grid'
+      }, function(state) {
+        // callback function
+      });
+    });
+
+    // Add Gallery Item to Lightbox
+    $('.mix img').magnificPopup({
+      type: 'image',
+      callbacks: {
+        beforeOpen: function(e) {
+          // we add a class to body to indicate overlay is active
+          // We can use this to alter any elements such as form popups
+          // that need a higher z-index to properly display in overlays
+          $('body').addClass('mfp-bg-open');
+
+          // Set Magnific Animation
+          this.st.mainClass = 'mfp-zoomIn';
+
+          // Inform content container there is an animation
+          this.contentContainer.addClass('mfp-with-anim');
+        },
+        afterClose: function(e) {
+
+          setTimeout(function() {
+            $('body').removeClass('mfp-bg-open');
+            $(window).trigger('resize');
+          }, 1000)
+
+        },
+        elementParse: function(item) {
+          // Function will fire for each target element
+          // "item.el" is a target DOM element (if present)
+          // "item.src" is a source that you may modify
+          item.src = item.el.attr('src');
+        },
+      },
+      overflowY: 'scroll',
+      removalDelay: 200, //delay removal by X to allow out-animation
+      prependTo: $('#content_wrapper')
+    });
+
+  });
+  </script>
+
+
+    <script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core
+    Core.init();
+
+    // Init Demo JS
+    Demo.init();
+
+    // Dropzone autoattaches to "dropzone" class.
+    // Configure Dropzone options
+    Dropzone.options.dropZone = {
+      paramName: "file", // The name that will be used to transfer the file
+      maxFilesize: 0, // MB
+
+      addRemoveLinks: true,
+      dictDefaultMessage: '<i class="fa fa-cloud-upload"></i> \
+         <span class="main-text"><b>Drop Files</b> to upload</span> <br /> \
+         <span class="sub-text">(or click)</span> \
+        ',
+      dictResponseError: 'Server not Configured'
+    };
+
+    Dropzone.options.dropZone2 = {
+      paramName: "file", // The name that will be used to transfer the file
+      maxFilesize: 0, // MB
+
+      addRemoveLinks: true,
+      dictDefaultMessage: '<i class="fa fa-cloud-upload"></i> \
+         <span class="main-text"><b>Drop Files</b> to upload</span> <br /> \
+         <span class="sub-text">(or click)</span> \
+        ',
+      dictResponseError: 'Server not Configured'
+    };
+
+    // DEMO CODE - creates mock uploads upon pageload
+    setTimeout(function() {
+      var Drop = $('#dropZone2');
+      Drop.addClass('dz-started dz-demo');
+
+      setTimeout(function() {
+        $('.example-preview').each(function(i, e) {
+          var This = $(e);
+
+          var thumbOut = setTimeout(function() {
+            Drop.append(This);
+            This.addClass('animated fadeInRight').removeClass('hidden');
+          }, i * 135);
+
+        });
+      }, 750);
+
+    }, 800);
+
+    // Demo code
+    $('.example-preview').on('click', 'a.dz-remove', function() {
+      $(this).parent('.example-preview').remove();
+    });
+
+  });
+  </script>
+
+<!-- PubNub Scripts -->
+  <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
+  <script>(function(){
+        var pubnub = new PubNub({ publishKey : 'pub-c-d4d1e7c8-6c3c-49b9-adfd-f427ab78da49', subscribeKey : 'sub-c-bff718a4-f0e4-11e6-87db-0619f8945a4f' });
+        function $(id) { return document.getElementById(id); }
+        var box = $('box'), input = $('input'), channel = '10chat-demo';
+        pubnub.addListener({
+            message: function(obj) {
+                box.innerHTML = box.innerHTML + (''+obj.message.user+': '+obj.message.message).replace( /[<>]/g, '' ) + '<br>'
+            }});
+        pubnub.subscribe({channels:[channel]});
+        input.addEventListener('keyup', function(e) {
+            if ((e.keyCode || e.charCode) === 13) {
+              pubnub.publish({channel : channel, message : {user: 'yan', message: input.value}, x : (input.value='')});
+          }
+        });
+  })();</script>
+  <!-- END: PAGE SCRIPTS -->
+
+</body>
+
+</html>
