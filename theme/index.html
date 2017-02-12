@@ -90,12 +90,14 @@
 
 
 
-
+        <li >
+          <h2> Creator Console </h2>
+        </li>
         <li class="menu-divider hidden-xs">
           <i class="fa fa-circle"></i>
         </li>
         <li class="dropdown">
-          <a href="index.html#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64 mr15"> John.Smith
+          <a href="index.html#" class="dropdown-toggle fw600 p15" data-toggle="dropdown"> <img src="assets/img/avatars/ashleysmall.jpg" alt="avatar" class="mw30 br64 mr15"> Cassie.Alder
             <span class="caret caret-tp hidden-xs"></span>
           </a>
           <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
@@ -272,6 +274,8 @@
           </li>
 -->
           <!-- sidebar progress bars -->
+          <li class="sidebar-label pt25 pb10">Contract</li>
+          <!--
           <li class="sidebar-label pt25 pb10">Task Glide Space</li>
           <li class="sidebar-stat">
             <a href="index.html#projectOne" class="fs11">
@@ -297,6 +301,7 @@
               </div>
             </a>
           </li>
+        -->
         </ul>
         <!-- End: Sidebar Menu -->
 
@@ -362,7 +367,7 @@
 
 
 <div class="row">
-
+<!--
             <div class="col-sm-4 hidden-xs pr20">
 
               <h4> Dropzone.JS - <small>"The last Slider You Will Ever Need."</small></h4>
@@ -387,7 +392,7 @@
 
 
             </div>
-
+-->
             <div class="col-xs-12 col-sm-8 pl30">
               <div class="tray-bin pl10 mb10" style="min-height: 250px;">
                 <h5 class="text-muted mt10 fw600 pl10">
@@ -1137,9 +1142,11 @@
 
 <!-- PubNub Scripts -->
   <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
-<script>(function(){
+<script>
+    var taskArray = [];
+    (function(){
       var pubnub = new PubNub({ publishKey : 'pub-c-d4d1e7c8-6c3c-49b9-adfd-f427ab78da49', subscribeKey : 'sub-c-bff718a4-f0e4-11e6-87db-0619f8945a4f' });
-      var taskArray = [];
+      var chatChannel = '10chat-demo', taskChannel = 'tasks';
       function renderTask(tasks) {
         var output = '';
         for(let i = 0; i < tasks.length; i++) {
@@ -1148,7 +1155,7 @@
             //output += '<a href=\"pages_confirmation.html\">';
           //}
           output += '<span class=\"fa fa-dot-circle-o text-primary\"></span>' +
-                    '<span class=\"sidebar-title\" onclick=\"signOff(' + i + ');\"> ' + tasks[i].name + '</span>';
+                    '<span class=\"sidebar-title\" id=\"task' + i + '\" onClick=\"signOff(' + i + ')\"> ' + tasks[i].name + '</span>';
                     //'<span class=\"sidebar-title-tray\">' +
                     //'<span class=\"label label-xs bg-primary\">Sign here</span>' +
                     //'</span>';
@@ -1161,24 +1168,43 @@
       }
 
       function $(id) { return document.getElementById(id); }
-      var box = $('box'), input = $('input'), tasks = $('tasks'), chatChannel = '10chat-demo', taskChannel = 'tasks';
+      var box = $('box'), input = $('input'), tasks = $('tasks');
       pubnub.addListener({
           message: function(obj) {
             if(obj.channel == 'tasks') {
               console.log('hit tasks!');
-              if(obj.message.type == 0) {
-                console.log('ignore client task broadcast!');
-              } else {
-                var taskArray = obj.message.tasks;
-                if(taskArray !== undefined) {
-                  tasks.innerHTML = renderTask(taskArray);
-                } else {
-                  console.log('invalid task array!');
-                }
+              switch(obj.message.type) {
+                case 0:
+                  console.log('ignore client task broadcast!');
+                  break;
+                case 1:
+                  taskArray = obj.message.tasks;
+                  //console.log(taskArray);
+                  if(taskArray !== undefined) {
+                    tasks.innerHTML = renderTask(taskArray);
+                  } else {
+                    console.log('invalid task array!');
+                  }
+                  break;
+                case 2:
+                  console.log('Task Retrieval command received!');
+                  break;
+                default:
+                  console.log('should not be here!');
               }
+              // if(obj.message.type == 0) {
+              //   console.log('ignore client task broadcast!');
+              // } else {
+              //   taskArray = obj.message.tasks;
+              //   //console.log(taskArray);
+              //   if(taskArray !== undefined) {
+              //     tasks.innerHTML = renderTask(taskArray);
+              //   } else {
+              //     console.log('invalid task array!');
+              //   }
+              // }
               } else if(obj.channel == 'payments'){
                 console.log('hit payments!');
-
               } else {
                 // tasks.innerHTML = '<li class=\"sidebar-proj\">' +
                 //   '<a href=\"pages_confirmation.html\">' +
@@ -1196,29 +1222,38 @@
         );
       pubnub.subscribe({channels:[chatChannel, taskChannel]});
       input.addEventListener('keyup', function(e) {
-          if ((e.keyCode || e.charCode) === 13) {
-            var taskTest = {
-                            tasks: [
-                              {name:"new task", amount:9000, status:-1},
-                              {name:"another task", amount:1500, status:-1}
-                            ],
-                            type:1
-                          };
-            pubnub.publish({channel: taskChannel, message: taskTest});
-            taskTest = {
-                            tasks: [
-                              {name:"bad task", amount:9000, status:-1},
-                              {name:"another bad task", amount:1500, status:-1}
-                            ],
-                            type:0
-                          };
-            pubnub.publish({channel: taskChannel, message: taskTest});
+
+           if ((e.keyCode || e.charCode) === 13) {
+            // var taskTest = {
+            //                 tasks: [
+            //                   {name:"new task", amount:9000, status:-1},
+            //                   {name:"another task", amount:1500, status:-1}
+            //                 ],
+            //                 type:1
+            //               };
+            // pubnub.publish({channel: taskChannel, message: taskTest});
+          //   taskTest = {
+          //                   tasks: [
+          //                     {name:"bad task", amount:9000, status:-1},
+          //                     {name:"another bad task", amount:1500, status:-1}
+          //                   ],
+          //                   type:0
+          //                 };
+          //   pubnub.publish({channel: taskChannel, message: taskTest});
+
             pubnub.publish({channel : chatChannel, message : {user: 'yan', message: input.value}, x : (input.value='')});
         }
       });
 })();
 function signOff(taskItem) {
   console.log('Signing off task ' + taskItem);
+  console.log(taskArray);
+  if(taskArray !== undefined) {
+    taskArray[taskItem].status = 0;
+  } else {
+    console.log('taskArray is empty!');
+  }
+  pubnub.publish({channel: 'tasks', message: {tasks:taskArray, type:1}});
 }
 </script>
   <!-- END: PAGE SCRIPTS -->
