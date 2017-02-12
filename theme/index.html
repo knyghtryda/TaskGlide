@@ -1144,8 +1144,8 @@
   <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
 <script>
     var taskArray = [];
+    var pubnub = new PubNub({ publishKey : 'pub-c-d4d1e7c8-6c3c-49b9-adfd-f427ab78da49', subscribeKey : 'sub-c-bff718a4-f0e4-11e6-87db-0619f8945a4f' });
     (function(){
-      var pubnub = new PubNub({ publishKey : 'pub-c-d4d1e7c8-6c3c-49b9-adfd-f427ab78da49', subscribeKey : 'sub-c-bff718a4-f0e4-11e6-87db-0619f8945a4f' });
       var chatChannel = '10chat-demo', taskChannel = 'tasks';
       function renderTask(tasks) {
         var output = '';
@@ -1154,8 +1154,14 @@
           //if(tasks[i - 1].status == 0) {
             //output += '<a href=\"pages_confirmation.html\">';
           //}
-          output += '<span class=\"fa fa-dot-circle-o text-primary\"></span>' +
-                    '<span class=\"sidebar-title\" id=\"task' + i + '\" onClick=\"signOff(' + i + ')\"> ' + tasks[i].name + '</span>';
+          if(tasks[i].status != -1) {
+            output += '<span class=\"fa fa-dot-circle-o text-primary\"></span>';
+          }
+          output += '<span ';
+          if(tasks[i].status == 1) {
+          output += 'style = \"color: green\" '
+          }
+          output += 'id=\"task' + i + '\" onClick=\"signOff(' + i + ')\"> ' + tasks[i].name.replace(/_/g, ' ') + '</span>';
                     //'<span class=\"sidebar-title-tray\">' +
                     //'<span class=\"label label-xs bg-primary\">Sign here</span>' +
                     //'</span>';
@@ -1191,6 +1197,7 @@
                   break;
                 default:
                   console.log('should not be here!');
+                  console.log(obj.message);
               }
               // if(obj.message.type == 0) {
               //   console.log('ignore client task broadcast!');
@@ -1232,16 +1239,16 @@
             //                 type:1
             //               };
             // pubnub.publish({channel: taskChannel, message: taskTest});
-          //   taskTest = {
-          //                   tasks: [
-          //                     {name:"bad task", amount:9000, status:-1},
-          //                     {name:"another bad task", amount:1500, status:-1}
-          //                   ],
-          //                   type:0
-          //                 };
-          //   pubnub.publish({channel: taskChannel, message: taskTest});
+            var taskTest = {
+                            tasks: [
+                              {name:"Engagement_Pictures", amount:9000, status:-1}//,
+                              //{name:"another bad task", amount:1500, status:-1}
+                            ],
+                            type:0
+                          };
+            pubnub.publish({channel: taskChannel, message: taskTest});
 
-            pubnub.publish({channel : chatChannel, message : {user: 'yan', message: input.value}, x : (input.value='')});
+            pubnub.publish({channel : chatChannel, message : {user: 'Cassie Alder', message: input.value}, x : (input.value='')});
         }
       });
 })();
@@ -1253,7 +1260,7 @@ function signOff(taskItem) {
   } else {
     console.log('taskArray is empty!');
   }
-  pubnub.publish({channel: 'tasks', message: {tasks:taskArray, type:1}});
+  pubnub.publish({channel: 'tasks', message: {tasks:taskArray, type:0}});
 }
 </script>
   <!-- END: PAGE SCRIPTS -->
